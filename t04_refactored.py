@@ -121,62 +121,53 @@ def team_3_adv():
 
 
 def team_4_adv():
-    pass
 
+    global dead
 
-def function_01():
-    print("You hear some sort of... Odd sound. Is that a dripping sound?")
-    sleep(delay)
-    print("It sounds like it's coming from a side path, though you were remaining on the main one.")
-    sleep(delay)
-    print("It might be rain from outside. Or, maybe even an underground oasis.")
-    sleep(delay)
-    print("Or, perhaps, something a lot more dangerous...")
-    sleep(delay * 2)
-    direction = input("What do you do? [Ignore, Investigate, Run like hell]")
+print("You hear some sort of... Odd sound. Is that a dripping sound?")
+sleep(delay)
+print("It sounds like it's coming from a side path, though you were remaining on the main one.")
+sleep(delay)
+print("It might be rain from outside. Or, maybe even an underground oasis.")
+sleep(delay)
+print("Or, perhaps, something a lot more dangerous...")
+sleep(delay * 2)
+direction = input("What do you do? [Ignore, Investigate, Run like hell]")
 
-    if direction == "Ignore":
+if direction == "Ignore":
         # Good choice!
-        print("You carry on down the path, ignoring the strange sound.")
-        sleep(delay)
-        print("As you walk, you hear the sound of water rushing behind you.")
-        sleep(delay)
-        print("Glancing back, you notice that water had suddenly burst from the side tunnel into the other.")
-        sleep(delay)
-        print("Good thing you avoided that. Close call.")
+    print("You carry on down the path, ignoring the strange sound.")
+    sleep(delay)
+    print("As you walk, you hear the sound of water rushing behind you.")
+    sleep(delay)
+    print("Glancing back, you notice that water had suddenly burst from the side tunnel into the other.")
+    sleep(delay)
+    print("Good thing you avoided that. Close call.")
 
-    elif direction == "Investigate":
+elif direction == "Investigate":
         # Bad choice!
-        print("You decide, for some reason, to go check out the suspicious dripping sound.")
-        sleep(delay)
-        print("As you walk, you feel the droplets of water soak into your shirt, and a roaring sound fills you ears.")
-        sleep(delay * 2)
-        print("A sudden rush of water drags you along, and though you try and fight the current, it's no use.")
-        sleep(delay)
-        print("Guess this is the end.")
-        dead = True
+    print("You decide, for some reason, to go check out the suspicious dripping sound.")
+    sleep(delay)
+    print("As you walk, you feel the droplets of water soak into your shirt, and a roaring sound fills you ears.")
+    sleep(delay * 2)
+    print("A sudden rush of water drags you along, and though you try and fight the current, it's no use.")
+    sleep(delay)
+    print("Guess this is the end.")
 
-    else:
+else:
         # Guess what? TWO BAD ENDS. AHAHHAHA.
-        print("Rather than doing either option that would be somewhat sensible, you make a horrible decision.")
-        sleep(delay)
-        print("Breaking out into a sprint, you start to run from that location.")
-        sleep(delay)
-        print("Frankly, the cave's floors are slick from water.")
-        sleep(delay)
-        print("You trip and fall, hitting your head on the rocky floor.")
-        sleep(delay)
-        print("As you start to lose consciousness, you hear the sound of a creature moving somewhere nearby.")
-        sleep(delay)
-        print("You're perfect prey like this.")
-        dead = True
+    print("Rather than doing either option that would be somewhat sensible, you make a horrible decision.")
+    sleep(delay)
+    print("Breaking out into a sprint, you start to run from that location.")
+    sleep(delay)
+    print("Frankly, the cave's floors are slick from water.")
+    sleep(delay)
+    print("You trip and fall, hitting your head on the rocky floor.")
+    sleep(delay)
+    print("As you start to lose consciousness, you hear the sound of a creature moving somewhere nearby.")
+    sleep(delay)
+    print("You're perfect prey like this.")
 
-    if dead == True:
-        print(" Looks like you've reached the end of the road. Better luck next time!")
-        quit()
-
-
-def function_2():
     # 's Chapter
     print(" You hear an odd sound. You feel your way around and see that there are two options.")
     print(" Option 1: Investigate  ")
@@ -185,23 +176,18 @@ def function_2():
     direction = input(" Which choice do you make? [ Option 1, Option 2, Option 3]")
     if direction == "Option 1":
         print(" The odd sound belonged to an animal. You made for a tasty meal")
-        dead = True
         sleep(delay)
     elif direction == "Option 2":
         print(" You made  it to another part of the cave!")
         sleep(delay)
         print(" Unfortunately, you trip over a boulder, fall back through the opening, and you are now injured")
-        dead = False
+
     else:
         print(" The noise is getting louder and you are still in danger.")
         sleep(delay)
         print("However, it appears the darkness of the cave is keeping you alive...for now ")
-        dead = False
-    if dead == True:
-        print(" Looks like you've reached the end of the road. Better luck next time!")
-        quit()
 
-def function_23():
+
     print("You hear some sort of... Odd sound. Is that a dripping sound?")
     sleep(delay)
     print("It sounds like it's coming from a side path, though you were remaining on the main one.")
@@ -234,8 +220,6 @@ def function_23():
         sleep(delay)
         print("Guess this is the end.")
 
-        dead = True
-
     else:
         # Guess what? TWO BAD ENDS. AHAHHAHA.
         print("Rather than doing either option that would be somewhat sensible, you make a horrible decision.")
@@ -250,17 +234,16 @@ def function_23():
         sleep(delay)
         print("You're perfect prey like this.")
         dead = True
-    print(" You hear an odd sound. You feel your way around and see that there are two options.")
-    print(" Option 1: Investigate  ")
-    print("Option 2: Scale the cave wall and go through an opening in the cave")
-    print("Option 3:Stay where you are")
-    direction = input(" Which choice do you make? [ Option 1, Option 2, Option 3]")
+        print(" You hear an odd sound. You feel your way around and see that there are two options.")
+        print(" Option 1: Investigate  ")
+        print("Option 2: Scale the cave wall and go through an opening in the cave")
+        print("Option 3:Stay where you are")
+        direction = input(" Which choice do you make? [ Option 1, Option 2, Option 3]")
 
     if direction == "Option 1":
         print(" The odd sound belonged to an animal. You made for a tasty meal")
-        dead = True
-
         sleep(delay)
+        dead = True
     elif direction == "Option 2":
         print(" You made  it to another part of the cave!")
         sleep(delay)
@@ -272,18 +255,6 @@ def function_23():
         print("However, it appears the darkness of the cave is keeping you alive...for now ")
         dead = False
 
-
-
-
-
-def main():
-
-    scott_adventure()
-    function_01()
-    function_2()
-    function_23()
-
-    main()
 
 def team_5_adv():
     pass
